@@ -40,6 +40,23 @@ var secretKey = seaweedFs.GetSecretKey();
 SeaweedFS runs in `weed mini` mode. The module exposes the S3 gateway on its
 container port `8333`; Testcontainers maps it to an available host port.
 
+## Using the SeaweedFS Enterprise image
+
+`chrislusf/seaweedfs-enterprise` is a drop-in replacement for the open-source
+image at the container level: same `mini` command, same environment variables
+(`AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `S3_BUCKET`), same startup
+banner, same S3 gateway port. No license is required for development/testing
+under 25TB, so `SeaweedFsBuilder` works unmodified — just swap the image:
+
+```csharp
+await using var seaweedFs = new SeaweedFsBuilder("chrislusf/seaweedfs-enterprise:4.40")
+    .WithBucket("test-bucket")
+    .Build();
+```
+
+This parity is verified in `SeaweedFsImageCompatibilityTest`, which runs the
+same test body against both images.
+
 ## AWS SDK for .NET
 
 Use path-style access because Testcontainers assigns a random local port.
