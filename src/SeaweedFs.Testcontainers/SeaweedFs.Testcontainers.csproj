@@ -15,8 +15,9 @@
         <Authors>lumenpi</Authors>
         <PackageTags>testcontainers;seaweedfs;s3;docker;integration-testing</PackageTags>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageProjectUrl>https://github.com/lumenpi/testcontainers-seaweedfs-dotnet</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/lumenpi/testcontainers-seaweedfs-dotnet</RepositoryUrl>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageProjectUrl>https://github.com/LumenPI/testcontainers-seaweedfs-dotnet</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/LumenPI/testcontainers-seaweedfs-dotnet</RepositoryUrl>
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>

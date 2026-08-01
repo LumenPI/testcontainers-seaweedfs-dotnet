@@ -17,6 +17,7 @@ x86/
 *.nupkg
 *.snupkg
 .nuget/
+artifacts/
 
 # Test results
 [Tt]est[Rr]esult*/
